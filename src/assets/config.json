@@ -1,0 +1,5 @@
+{
+  "BACKEND_URL": "http://www.omdbapi.com/",
+  "BACKEND_KEY": "8d85f2f6",
+  "UseBackend": "true"
+}

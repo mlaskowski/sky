@@ -1,0 +1,7 @@
+<div>
+  <h1 class="title text-center">Ostatnio wyszukiwane</h1>
+  <span *ngIf="!history">Jeszcze nic nie wyszukałeś :) miłej zabawy</span>
+
+  <app-card *ngFor="let historyDetail of history" [details]="historyDetail"></app-card>
+
+</div>

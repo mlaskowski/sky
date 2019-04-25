@@ -3,8 +3,15 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "module": "es2015",
-    "types": []
+    "types": [],
+    "paths": {
+      "core-js/es7/reflect": [
+        "node_modules/core-js/proposals/reflect-metadata"
+      ]
+    },
+    "baseUrl": "./"
   },
+
   "exclude": [
     "src/test.ts",
     "**/*.spec.ts"

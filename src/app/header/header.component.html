@@ -1,0 +1,16 @@
+<div class="container-fluid header">
+  <div class="row align-items-center">
+    <div class="col-xs-12  col-sm-4 col-md-3 col-lg-4 justify-content-sm-start logo-container">
+      <img class="logo" [src]="'../../../assets/img/' + type + '/logo.svg'" alt="logo">
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-4  d-flex justify-content-center justify-content-sm-end justify-content-md-center ">
+      <nav class="nav">
+        <a *ngFor="let link of links " class="nav-button" [routerLink]="[link.path]">{{link.label}}</a>
+      </nav>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 d-flex justify-content-center justify-content-md-end">
+      <div class="search-container"><app-search [type]="type"></app-search></div>
+
+    </div>
+  </div>
+</div>

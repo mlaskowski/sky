@@ -1,0 +1,17 @@
+<div class="input-group">
+
+  <input type="text" placeholder="szukaj" class="form-control search-input"
+         (keyup)="searchTerm$.next($event.target.value)" (focus)="focusFunction()" (focusout)="focusOutFunction()">
+  <span class="{{type}}-background input-group-icon"></span>
+</div>
+
+<ul class="search-list" *ngIf="results && results.Search && resultsVisible">
+  <li class="search-list-element {{result.Type}}-border" *ngFor="let result of results.Search | slice:0:9">
+    <a class="search-list-element-link" (mousedown)="redirect(result.imdbID)">
+      <img class="search-list-element-img"[src]="result.Poster"  onerror="this.src='https://semantic-ui.com/images/wireframe/image.png'" >
+      <span class="search-list-element-text">{{ result.Title }}</span>
+    </a>
+  </li>
+</ul>
+
+<span *ngIf="results && results.Response === 'False'">{{results.Error}}</span>
